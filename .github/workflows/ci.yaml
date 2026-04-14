@@ -20,7 +20,7 @@ jobs:
       - name: Build and Push
         uses: docker/build-push-action@v5
         with:
-          context: ./app
+          context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/docker-fastapi:${{ github.sha }}
 
